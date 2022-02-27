@@ -16,5 +16,10 @@ a {
 }
 
 * {
-  box-sizing: border-box;
+  box-sizing: border-b;
+}
+@layer base {
+  body {
+    @apply dark:bg-slate-900 dark:text-white;
+  }
 }
