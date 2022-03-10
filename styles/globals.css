@@ -30,7 +30,7 @@ a {
   @apply flex flex-col items-center justify-center bg-transparent filter backdrop-blur-md;
 }
 .nav-links {
-  @apply pr-5 font-semibold;
+  @apply pr-5 pt-4 font-semibold;
 }
 
 @screen sm {
