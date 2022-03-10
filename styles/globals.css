@@ -8,6 +8,7 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  background-repeat: no-repeat;
 }
 
 a {
@@ -16,10 +17,30 @@ a {
 }
 
 * {
-  box-sizing: border-b;
+  box-sizing: border-box;
 }
 @layer base {
   body {
-    @apply dark:bg-slate-900 dark:text-white;
+    @apply transition duration-1000 dark:bg-slate-900 dark:text-white;
+  }
+}
+
+/* Nav-start */
+.nav {
+  @apply flex flex-col items-center justify-center bg-transparent filter backdrop-blur-md;
+}
+.nav-links {
+  @apply pr-5 font-semibold;
+}
+
+@screen sm {
+  .nav {
+    @apply flex w-full flex-row border-b py-3 dark:border-slate-700;
+  }
+  .nav-links {
+    @apply flex flex-grow items-center justify-end space-x-7 border-r border-slate-600 text-center font-semibold;
+  }
+  .react-icons {
+    @apply h-20 w-10;
   }
 }
